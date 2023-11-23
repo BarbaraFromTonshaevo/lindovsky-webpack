@@ -1,0 +1,45 @@
+//- Окно Заказать звонок
+.popup(id="order-call")
+	.popup__window
+		.popup__close.el-close
+		.popup__wrapper 
+			.popup__img 
+				img(src="./img/index/popup-img.jpg", alt="")
+			.popup__content
+				h2.popup__title Заказать звонок
+				.popup__subtitle Оставьте заявку, наш менеджер перезвонит Вам и проконсультирует по всем вопросам.
+				form(action="") 
+					div
+						input(type="text", required="required", name="name", placeholder="Имя").form__field
+					div
+						input(type="tel", required="required", name="phone", placeholder="Телефон").form__field.mask-tel
+					.popup__remark Отправляя форму, Вы подтверждаете своё 
+						a(href="#") согласие на обработку персональных данных.
+					div
+						input(type="submit", value="Оставить заявку").btn-s.form__btn
+.popup(id="success")
+	.popup__window
+		.popup__close.el-close
+		h2.popup__title Заявка отправлена
+		.popup__subtitle В ближайшее время с Вами свяжется наш менеджер
+		.popup__btn-close.btn-s Закрыть
+.popup(id="news")
+	.popup__window 
+		.popup__close.el-close
+		.popup__date 28/08/2023
+		h2.popup__title Новости по этапам строительства за июль 2023 года
+		.popup__text 
+			.content 
+				p Корпус 1
+				ul
+					li Ведутся монолитные работы по монтажу каркасной части дома на 23 этаже.
+					li Ведется кирпичная кладка стен на 17-ом этаже дома.
+					li Производится монтаж сантехнической системы на 13-14 этажах дома.
+					li Завершены работы по монтажу систем вентиляции и дымоудаления с 1 по 16 этажи.
+					li Ведутся работы по монтажу систем ХВС и ГВС в подвальной части дома.
+					li Начались работы по монтажу электропроводки. Работы ведутся на втором этаже дома.
+				p
+				p Корпус 2
+				ul
+					li Производится монтаж сантехнической системы на 13-14 этажах дома.
+					li Завершены работы по монтажу систем вентиляции и дымоудаления с 1 по 16 этажи.

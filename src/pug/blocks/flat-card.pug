@@ -1,0 +1,131 @@
+//- Окно Карточка квартиры
+.popup(id="choose-flat")
+	.popup__window
+		.popup__close.el-close
+		.popup__wrapper.choose-flat
+			.choose-flat__tabs 
+				.choose-flat__top
+					.choose-flat__compass 
+						img(src="./img/icons/compass.svg", alt="")
+					.choose-flat__scheme
+						img(src="./img/icons/flat-scheme.svg", alt="")
+				.tabs-block(id="flatCardPhotos")
+					.tabs-body-wrap
+						.tabs-body
+							a(href="./img/index/flat-plan-big-1.png", data-fancybox="flat-card").choose-flat__img 
+								img(src="./img/index/flat-plan-big-1.png", alt="", loading="lazy")
+						.tabs-body
+							a(href="./img/index/floor-plan.jpeg", data-fancybox="flat-card").choose-flat__img 
+								img(src="./img/index/floor-plan.jpeg", alt="", loading="lazy")
+					.tabs-btns
+						button.tabs-btns__item Планировка
+						button.tabs-btns__item План этажа
+			.choose-flat__content
+				h2.popup__title 1+ комнатная квартира 43,3 м²
+				.choose-flat__info 
+					.choose-flat__info-item 
+						.choose-flat__info-name Корпус
+						.choose-flat__info-value 1
+					.choose-flat__info-item 
+						.choose-flat__info-name Этаж
+						.choose-flat__info-value 4/20
+					.choose-flat__info-item 
+						.choose-flat__info-name Цена за 1 м2
+						.choose-flat__info-value 167 000 руб/м2
+				.choose-flat__labels 
+					.choose-flat__labels-item Две лоджии
+					.choose-flat__labels-item Мастер-спальня
+					.choose-flat__labels-item Гардеробная
+					.choose-flat__labels-item Окно в санузле
+					.choose-flat__labels-item Планировка евро-формата
+				.choose-flat__cost Стоимость квартиры <span>7 231 000 руб.</span>
+			.choose-flat__white-box
+				.choose-flat__white-box-title Отделка White Box*
+				.control-wrap 
+					.control-prev.choose-flat__swiper-prev
+					.control-next.choose-flat__swiper-next
+				.swiper.choose-flat__swiper 
+					.swiper-wrapper 
+						.swiper-slide 
+							.choose-flat__swiper-img
+								img(src="./img/index/white-box-1.jpg", alt="", loading="lazy")
+						.swiper-slide 
+							.choose-flat__swiper-img
+								img(src="./img/index/white-box-1.jpg", alt="", loading="lazy")
+						.swiper-slide 
+							.choose-flat__swiper-img
+								img(src="./img/index/white-box-1.jpg", alt="", loading="lazy")
+						.swiper-slide 
+							.choose-flat__swiper-img
+								img(src="./img/index/white-box-1.jpg", alt="", loading="lazy")
+				.popup__remark *White Box — *Белая коробка / вид предчистовой отделки
+			.choose-flat__btns
+				a(href data-popup="book-apartment").btn-s Забронировать
+				a(href data-popup="get-consultation").btn-s.btn-s--white <span>Получить консультацию</span>
+
+//- Окно Получить консультацию
+.popup(id="get-consultation")
+	.popup__window
+		.popup__close.el-close
+		.popup__wrapper 
+			.popup__img 
+				img(src="./img/index/popup-img.jpg", alt="", loading="lazy")
+			.popup__content
+				h2.popup__title Получить консультацию
+				.popup__subtitle Оставьте заявку, наш менеджер перезвонит Вам и проконсультирует по всем вопросам.
+				form(action="#") 
+					.form-item
+						input(type="text", required="required", name="name", placeholder="Имя").form__field
+					.form-item
+						input(type="tel", required="required", name="phone", placeholder="Телефон").form__field.mask-tel
+					.form-item
+						.popup__remark Отправляя форму, Вы подтверждаете своё 
+							a(href="#", target="_blank") согласие на обработку персональных данных.
+					input(type="submit", value="Оставить заявку").btn-s.form__btn
+
+//- Окно Забронировать квартиру
+.popup(id="book-apartment")
+	.popup__window
+		.popup__close.el-close
+		.popup__wrapper.popup-form__wrapper 
+			.popup__content
+				h2.popup__title Забронировать квартиру
+				.popup__subtitle Оставьте заявку, наш менеджер перезвонит Вам и поможет забронировать квартиру
+				form(action="#") 
+					.form-item
+						input(type="text", required="required", name="name", placeholder="Имя").form__field
+					.form-item
+						input(type="tel", required="required", name="phone", placeholder="Телефон").form__field.mask-tel
+					.form-item
+						.popup__remark Отправляя форму, Вы подтверждаете своё 
+							a(href="#", target="_blank") согласие на обработку персональных данных.
+					input(type="submit", value="Оставить заявку").btn-s.form__btn
+
+//- Окно Забронировать парковочное место
+.popup(id="book-parking")
+	.popup__window
+		.popup__close.el-close
+		.popup__wrapper.popup-form__wrapper 
+			.popup__content
+				h2.popup__title Забронировать парковочное место
+				.popup__subtitle Оставьте заявку, наш менеджер перезвонит Вам и поможет забронировать парковочное место
+				form(action="#") 
+					.form-item
+						input(type="text", required="required", name="name", placeholder="Имя").form__field
+					.form-item
+						input(type="tel", required="required", name="phone", placeholder="Телефон").form__field.mask-tel
+					.form-item
+						.popup__remark Отправляя форму, Вы подтверждаете своё 
+							a(href="#", target="_blank") согласие на обработку персональных данных.
+					input(type="submit", value="Оставить заявку").btn-s.form__btn
+
+//- Окно Заявка отправлена
+.popup(id="popup-success")
+	.popup__window
+		.popup__close.el-close
+		.popup__wrapper.popup-success 
+			.popup__content
+				h2.popup__title Заявка отправлена
+				.popup__subtitle В ближайшее время с Вами свяжется наш менеджер
+				button.btn-s.form__btn.popup__close-js Закрыть
+				

@@ -1,0 +1,117 @@
+extends ../layout/main
+
+block append variables
+    - const pageTitle = "Ипотека";
+    //- const prevPage = {href: '', text: ''};
+    //- const pageTitle_OFF = true;
+
+block content
+    section
+        include ../blocks/breadcrumbs
+        .hypothec-info
+            .container
+                .hypothec__text 
+                    .content 
+                        p Ипотека — это залог недвижимости. То есть ипотечный кредит означает, что вы берете у банка деньги под процент (кредит), а гарантией того, что вы вернете эти деньги, становится залог вашего недвижимого имущества: дома, квартиры, земельного участка.
+                        p Рассчитайте ипотеку онлайн с помощью ипотечного калькулятора. Сервис поможет узнать размер ежемесячных платежей, сумму переплаты по банковским процентам и оценить размер экономии за счет досрочного погашения.
+
+                        h4 Ипотека для семьи с ребёнком — «Семейная ипотека»
+
+                        p Подойдет для семей, где хотя бы один ребёнок родился после 2018 года включительно или есть ребёнок с инвалидностью. Также с января 2023 года действие программы распространяется на семьи с двумя и более детьми до 18 лет, при этом сроки их рождения не имеют значения.
+                        P Есть возможность внести материнский капитал в качестве первоначального взноса.
+                        ul
+                            li Годовая ставка от 5,7%
+                            li Сумма кредита: до 6 млн
+                            li Первый взнос: от 20%
+                            li Срок кредита: до 30 лет
+        //- .hypothec-calc
+        //-     .container
+        //-         h2 Ипотечный калькулятор
+
+
+                //- .hypothec-calc__app#app
+                //-     <list-component></list-component>
+        .container
+            .example__slider.swiper
+                .swiper-wrapper
+                    .swiper-slide
+                        picture
+                            img(src="/assets/img/index/architecture-1m.jpg", alt="")
+                    .swiper-slide 
+                        picture
+                            img(src="/assets/img/index/architecture-2m.jpg", alt="")
+                    .swiper-slide 
+                        picture
+                            img(src="/assets/img/index/architecture-3m.jpg", alt="")
+                    .swiper-slide 
+                        picture
+                            img(src="/assets/img/index/architecture-4m.jpg", alt="")
+            .flats-filter 
+                button.flats-filter__btn Фильтры
+                .flats-filter__wrap
+                    button.flats-filter__close.el-close
+                    form(action="#")
+                        .flats-filter__form
+                            .flats-filter__corpus 
+                                .flats-filter__title Корпус
+                                .flats-filter__corpus-wrap 
+                                    .form-item 
+                                        input#corpus-1(type="checkbox", name="corpus")
+                                        label(for="corpus-1") 1
+                                    .form-item 
+                                        input#corpus-2(type="checkbox", name="corpus")
+                                        label(for="corpus-2") 2
+                            .flats-filter__rooms
+                                .flats-filter__title Количество комнат
+                                .flats-filter__rooms-wrap 
+                                    .form-item 
+                                        input#rooms-1(type="checkbox", name="rooms")
+                                        label(for="rooms-1") 1
+                                    .form-item 
+                                        input#rooms-2(type="checkbox", name="rooms")
+                                        label(for="rooms-2") 2
+                                    .form-item 
+                                        input#rooms-3(type="checkbox", name="rooms")
+                                        label(for="rooms-3") 3
+                            .flats-filter__price
+                                .flats-filter__title Стоимость (руб.)
+                                .flats-filter__price-wrap 
+                                    .filter-slider
+                                        .filter-slider-top
+                                            span.filter-slider-from от
+                                                span.filter-slider-from-value(data-min="5000000") 5000000
+                                            span.filter-slider-to до
+                                                span.filter-slider-to-value(data-max="15000000") 15000000
+                                        .filter-slider-line
+                            .flats-filter__area
+                                .flats-filter__title Площадь квартиры (м2)
+                                .flats-filter__area-wrap 
+                                    .filter-slider
+                                        .filter-slider-top
+                                            span.filter-slider-from от
+                                                span.filter-slider-from-value(data-min="32") 32
+                                            span.filter-slider-to до
+                                                span.filter-slider-to-value(data-max="80") 80
+                                        .filter-slider-line
+                            .flats-filter__params
+                                .flats-filter__title Дополнительные параметры
+                                .flats-filter__params-wrap 
+                                    .form-item 
+                                        input#params-1(type="checkbox", name="params")
+                                        label(for="params-1") Две лоджии
+                                    .form-item 
+                                        input#params-2(type="checkbox", name="params")
+                                        label(for="params-2") Окно в санузле
+                                    .form-item 
+                                        input#params-3(type="checkbox", name="params")
+                                        label(for="params-3") Мастер-спальня
+                                    .form-item 
+                                        input#params-4(type="checkbox", name="params")
+                                        label(for="params-4") Планировка евро-формата
+                                    .form-item 
+                                        input#params-5(type="checkbox", name="params")
+                                        label(for="params-5") Гардеробная
+                            .flats-filter__reset
+                                div 
+                                    input(type="reset", value="Сбросить фильтр")
+                    .flats-filter__results Посмотреть результаты

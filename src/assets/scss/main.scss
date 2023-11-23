@@ -1,0 +1,31 @@
+@import "utils/libs";
+@import "utils/fonts";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/reset";
+@import "utils/common";
+
+// Modules
+
+
+@import "modules/btn.scss";
+@import "modules/accordion.scss";
+@import "modules/content.scss";
+@import "modules/form.scss";
+@import "modules/page.scss";
+@import "modules/popup.scss";
+@import "modules/system-styles.scss";
+@import "modules/table.scss";
+@import "modules/tabs.scss";
+
+@import "modules/header.scss";
+@import "modules/footer.scss";
+@import "modules/components.scss";
+
+// PAGES
+
+@import "pages/index.scss";
+@import "pages/hypothec.scss";
+@import "pages/flats.scss";
+
+

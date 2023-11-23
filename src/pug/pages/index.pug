@@ -1,0 +1,81 @@
+extends ../layout/main
+
+block variables
+	- const pageTitle = "Главная";
+	- const bodyClass = "front";
+
+block content
+	.main-window
+		.main-window__arrow.el-scroll
+		.main-window__body
+			section.main-hero.main-window__block.active
+				.main-hero__img
+					picture
+						img(src="/assets/img/index/main-hero.jpg", alt="")
+				.main-hero__content 
+					h1.main-hero__title Линия комфорта жизни
+					.main-hero__logo
+						picture
+							img(src="/assets/img/icons/logo.svg", alt="lindovsky")
+			section.main-window__block.main-architecture
+				.container
+					.main-architecture__slider-wrap
+						.main-architecture__slider.swiper
+							.swiper-wrapper
+								.swiper-slide
+									picture
+										img(src="/assets/img/index/architecture-1m.jpg", alt="")
+								.swiper-slide 
+									picture
+										img(src="/assets/img/index/architecture-2m.jpg", alt="")
+								.swiper-slide 
+									picture
+										img(src="/assets/img/index/architecture-3m.jpg", alt="")
+								.swiper-slide 
+									picture
+										img(src="/assets/img/index/architecture-4m.jpg", alt="")
+							//- .main-architecture__slider-pagination
+							//- .main-architecture__slider-decor
+							//- .main-architecture__slider-control 
+							//- 	.main-architecture__slider-prev
+							//- 	.main-architecture__slider-next
+					.main-architecture__content
+						h2.main-architecture__title(data-letter="А") Aрхитектура
+						.main-architecture__text
+							p Фасад дома предусматривает сочетание яркого золотистого оттенка на темном фоне. Акцент зданию придает фактура материалов – бликующий глянец золотых оттенков в сочетании с тактильной матовостью штукатурного фасада.
+							p В проекте предусмотрен наземный паркинг с эксплуатируемой кровлей.
+			section.main-window__block.main-territory
+				.main-territory__wrap 
+					.main-territory__img 
+						picture
+							img(src="/assets/img/index/territory-m.jpg", alt="")
+					.main-territory__content
+						h2.main-territory__title(data-letter="Т") Территория
+						.main-territory__text
+							p Два сценария использования придомовой территории:
+							ul 
+								li Летний
+								li Зимний
+							p «Сезонный» концепт реализуется с помощью искусственных возвышенностей, площадок для озеленения, особых элементов для детской и спортивной зоны. Места отдыха будут адаптироваться с учетом смены сезона.
+						a(href="./about.html").main-territory__details.btn-m Подробнее о проекте
+			section.main-window__block.main-choose
+				.main-choose__wrap
+					h2.main-choose__title(data-letter="В") 
+						span ВЫБЕРИТЕ  
+						span ВАШУ  
+						span КВАРТИРУ
+					.main-choose__links
+						a(href="./flats-scheme.html").main-choose__link.el-link
+							.wrap
+								span Визуальный выбор
+								span 
+									img(src="/assets/img/index/choose-1.png", alt="")
+								
+						a(href="./flats-list.html").main-choose__link.el-link
+							.wrap
+								span Выбор по параметрам
+								span 
+									img(src="/assets/img/index/choose-2.png", alt="")
+
+
+

@@ -1,0 +1,23 @@
+.tabs-body {
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    opacity: 0;
+
+    &.animate {
+        animation: flyIn 1s forwards;
+    }
+}
+
+@keyframes flyIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

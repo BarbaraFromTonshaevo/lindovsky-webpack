@@ -1,0 +1,64 @@
+// Fonts here
+// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+
+/* Шрифты */
+@font-face {
+    font-family: 'Pobeda';
+    src: local('Pobeda Regular'), local('Pobeda-Regular'),
+        url('../fonts/Pobeda-Regular.woff2') format('woff2'),
+        url('../fonts/Pobeda-Regular.woff') format('woff'),
+        url('../fonts/Pobeda-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pobeda';
+    src: local('Pobeda Bold'), local('Pobeda-Bold'),
+        url('../fonts/Pobeda-Bold.woff2') format('woff2'),
+        url('../fonts/Pobeda-Bold.woff') format('woff'),
+        url('../fonts/Pobeda-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: local('Akrobat Light'), local('Akrobat-Light'),
+        url('../fonts/Akrobat-Light.woff2') format('woff2'),
+        url('../fonts/Akrobat-Light.woff') format('woff'),
+        url('../fonts/Akrobat-Light.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: local('Akrobat Regular'), local('Akrobat-Regular'),
+        url('../fonts/Akrobat-Regular.woff2') format('woff2'),
+        url('../fonts/Akrobat-Regular.woff') format('woff'),
+        url('../fonts/Akrobat-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Akrobat';
+    src: local('Akrobat SemiBold'), local('Akrobat-SemiBold'),
+        url('../fonts/Akrobat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Akrobat-SemiBold.woff') format('woff'),
+        url('../fonts/Akrobat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: local('Akrobat Bold'), local('Akrobat-Bold'),
+        url('../fonts/Akrobat-Bold.woff2') format('woff2'),
+        url('../fonts/Akrobat-Bold.woff') format('woff'),
+        url('../fonts/Akrobat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

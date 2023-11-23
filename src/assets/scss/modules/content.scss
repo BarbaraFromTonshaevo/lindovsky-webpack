@@ -1,0 +1,78 @@
+// стили для content
+.content{
+	p{
+		line-height: 24px;
+		&:not(:last-child){
+			margin-bottom: 15px;
+			@media (max-width: 1365px) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	ul{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		li{
+			position: relative;
+			padding-left: 20px;
+			&::before{
+				content: '';
+				display: block;
+				width: 6px;
+				height: 6px;
+				background-color: $black;
+				position: absolute;
+				top: 8px;
+				left: 0;
+			}
+		}
+	}
+	ol{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		counter-reset: olNum;
+		li{
+			position: relative;
+			padding-left: 20px;
+			&::before{
+				counter-increment: olNum;
+				content: counter(olNum) '.';
+				position: absolute;
+				top: 0px;
+				left: 0;
+			}
+		}
+	}
+	table{
+		width: 100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+		table-layout: fixed;
+		border: 1px solid #dfe1e3;
+		margin-bottom: 50px;
+		margin-top: 50px;
+		td, th{
+		   border: 1px solid #dfe1e3;
+		   padding: 14px 20px;
+		}
+		th{
+			text-align: left;
+			font-weight: 700;
+		}
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+strong{
+	font-weight: 700;
+}

@@ -1,0 +1,115 @@
+// Стили кнопок
+button,
+input {
+	outline: none;
+	border-radius: 0;
+	padding: 0;
+	background-color: transparent;
+	border: 0;
+}
+
+button,
+input[type="submit"] {
+	cursor: pointer;
+}
+
+.btn {
+
+	&,
+	&-s,
+	&-m {
+		height: 56px;
+		min-width: 180px;
+		width: fit-content;
+		padding: 0 44px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: $font;
+		font-weight: 500;
+		font-size: 16px;
+		border: 0;
+		cursor: pointer;
+		border-radius: 0;
+		background-color: lightgray;
+		transition: background-color 0.3s;
+		clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+
+		&:disabled {
+			background-color: $grey-lightest;
+			color: $grey-medium;
+		}
+
+		&:focus {
+			background-color: $focus;
+			outline: unset;
+		}
+
+		@media (max-width: 411px) {
+			height: 40px;
+			font-size: 14px;
+			padding: 0 32px;
+		}
+	}
+
+	& {
+		font-size: 20px;
+		background-color: $yellow;
+		color: $black;
+
+		@media (hover: hover) {
+			&:hover:not(:disabled) {
+				background-color: $yellow-light;
+			}
+		}
+	}
+
+	&-s {
+		height: 52px;
+		background-color: $black;
+		color: white;
+
+		@media (hover: hover) {
+			&:hover:not(:disabled) {
+				background-color: $black-light;
+			}
+		}
+
+		&--white {
+			position: relative;
+			background-color: white;
+			z-index: 1;
+			color: $black;
+			box-shadow: 0 0 0 1px $black;
+			clip-path: unset;
+			transform: skewX(-12deg);
+			height: 50px;
+
+			span {
+				transform: skewX(12deg);
+			}
+
+			&:hover {
+				color: white;
+				box-shadow: transparent;
+			}
+
+			&:focus {
+				box-shadow: unset;
+			}
+		}
+	}
+
+	&-m {
+		letter-spacing: 0.2px;
+		font-size: 20px;
+		background-color: $black;
+		color: white;
+
+		@media (hover: hover) {
+			&:hover:not(:disabled) {
+				background-color: $black-light;
+			}
+		}
+	}
+}
