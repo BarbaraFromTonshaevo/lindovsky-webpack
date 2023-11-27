@@ -78,15 +78,30 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: './assets/fonts/[name].[ext]'
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: './assets/img/[name].[ext]'
       }
-    }, {
+    }, 
+    // {
+    //   test: /\.json$/,
+    //   loader: 'file-loader',
+    //   options: {
+    //     name: './assets/data/[name].[ext]'
+    //   }
+    // }, 
+    // {
+    //   test: /\.json$/,
+    //   loader: 'json-loader',
+    //   options: {
+    //     name: '[name].[ext]'
+    //   }
+    // },
+    {
       test: /\.scss$/,
       use: [
         'style-loader',
@@ -131,6 +146,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/${PATHS.assets}data`, to: `${PATHS.assets}data` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
 

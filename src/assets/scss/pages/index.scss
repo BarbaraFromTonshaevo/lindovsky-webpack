@@ -338,9 +338,9 @@
             }
             &-pagination{
                 position: absolute;
-                bottom: 30px;
-                left: 50%;
-                width: fit-content;
+                bottom: 30px !important;
+                left: 50% !important;
+                width: fit-content !important;
                 transform: translateX(-50%);
                 color: white;
                 z-index: 2;
@@ -353,7 +353,7 @@
                     }
                 }
                 @media (max-width: 1023px) {
-                    bottom: 10px;
+                    bottom: 10px !important;
                 }
             }
             &-decor{

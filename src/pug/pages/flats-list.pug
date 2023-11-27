@@ -1,0 +1,31 @@
+extends ../layout/main
+
+block append variables
+    - const pageTitle = "Выбор квартир";
+    //- const prevPage = {href: '', text: ''};
+    //- const pageTitle_OFF = true;
+
+block content
+    .top
+        .container
+
+            ul.breadcrumbs
+                li
+                    a(href="index.html") Главная
+
+                if prevPage
+                    li 
+                        a(href=prevPage.href)=prevPage.text
+
+                li
+                    span #{pageTitle}
+
+            if !pageTitle_OFF
+                h1.page-title!=pageTitle
+    .flats__btns
+        .container
+            .flats__btns-wrap
+                a(href="./flats-scheme.html").flats__btn-scheme На схеме
+                a(href="javascript:void(0);").flats__btn-list Списком
+    #app 
+        <list-component></list-component>

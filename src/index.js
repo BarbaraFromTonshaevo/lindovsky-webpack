@@ -25,3 +25,5 @@ if(apppELem){
     el: '#app'
   })
 }
+
+// import file from './assets/data/list.json'

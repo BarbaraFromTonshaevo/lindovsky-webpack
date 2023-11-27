@@ -1,6 +1,7 @@
 // Main js file
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
 import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import noUiSlider from 'nouislider';
 // console.log('Varvara here');
 
@@ -90,19 +91,20 @@ if (isFront) {
 		const architectureSlider = architectureSection.querySelector('.main-architecture__slider');
 		architectureSliderWrap.style.marginLeft = - space + 'px';
 		const architectureSwiper = new Swiper(architectureSlider, {
+			modules: [Navigation, Pagination, Autoplay],
+			speed: 1000,
+			loop: true,
+			navigation: {
+				nextEl: ".main-architecture__slider-next",
+				prevEl: ".main-architecture__slider-prev",
+			},
+			pagination: {
+				el: ".main-architecture__slider-pagination",
+				type: "fraction",
+			},
 			autoplay: {
 				delay: 3000,
 			},
-			// speed: 1000,
-			// loop: true,
-			// navigation: {
-			// 	nextEl: ".main-architecture__slider-next",
-			// 	prevEl: ".main-architecture__slider-prev",
-			// },
-			// pagination: {
-			// 	el: ".main-architecture__slider-pagination",
-			// 	type: "fraction",
-			// },
 		})
 	}
 	// функция навигации по главной странице
