@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
   <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
   <h1>Webpack Template</h1>
   <p>
@@ -6,14 +6,14 @@
   </p>
   <p>Base Template: <a href="https://github.com/vedees/webpack-template">webpack-template</a></p>
   <p>Author: <a href="https://tocode.ru" target="_blank">To code</a> | <a href="https://www.youtube.com/playlist?list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV" target="_blank">Youtube guide in Russian</a></p>
-</div>
+</div> -->
 
 
 ## Build Setup:
 
 ``` bash
-# Download repository:
-git clone https://github.com/vedees/webpack-template-pug webpack-template-pug
+# # Download repository:
+# git clone https://github.com/vedees/webpack-template-pug webpack-template-pug
 
 # Go to the app:
 cd webpack-template-pug
